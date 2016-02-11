@@ -7,14 +7,60 @@
  
  ==============================================================================
  */
-
+#include "JuceHeader.h"
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 #include "DrumSynthAudioSource.h"
+#include "DrumSynthSound.h"
+#include "DrumSynthVoice.h"
+#include "Strings.h"
 
 //==============================================================================
-Fyp_samplerPrototype2AudioProcessor::Fyp_samplerPrototype2AudioProcessor()
+Fyp_samplerPrototype2AudioProcessor::Fyp_samplerPrototype2AudioProcessor(/*DrumSynthAudioSource& kickAudioSource*/)/* : kickAudioSource(keyboardState)*/
 {
+    for(int i = 0; i < 32; i++){
+        synth.addVoice(new DrumSynthVoice());
+        std::cout << "voices added\n";
+    }
+//    File localDir = File::getSpecialLocation (File::currentExecutableFile).getParentDirectory().getParentDirectory().getChildFile ("Resources");
+//    char *localDirPath[128];
+//    sprintf(*localDirPath, "%c", localDir);
+//    char charBuffer[128] = { 0 };
+//    sprintf(charBuffer, "%s%s%s", fileName[0], velocityIndex[5], stringEnd[0]);
+    
+    File file("/Users/GeorgeDemner/Documents/UWE/Year 3/Final Year Project/FYP_SamplerPrototype2/Builds/MacOSX/Bass Drum In 6_1.wav");
+    synth.addSound(new DrumSound(file, 48, 0));
+        std::cout << "sounds added\n";
+
+    /*
+    
+    // Initialise synthesiser variables here
+    char charBuffer[128] = { 0 };
+    for(int a = 0; a < 7; a++){
+        for (int x = 5; x < 6; x++){
+            for (int i = 0; i < 6; i++){
+                sprintf(charBuffer, "%s%s%s", fileName[a], velocityIndex[x], stringEnd[i]);
+                buffer[a].velocities[x].samples[i].openResource(charBuffer);
+                buffer[a].velocities[x].samples[i].reset();
+                printf("Buffer - %d Velocity - %d Sample - %d %s\n", a, x, i, charBuffer);
+            }
+        }
+    }
+    
+    for(int b = 0; b < 8; b++){
+        for(int a = 0; a < 5; a++){
+            for (int x = 5; x < 6; x++){
+                for (int i = 0; i < 6; i++){
+                    sprintf(charBuffer, "%s%s%s%s", fileName[b+7], cymbalMics[a], velocityIndex[x], stringEnd[i]);
+                    cymbals[b].mics[a].velocities[x].samples[i].openResource(charBuffer);
+                    cymbals[b].mics[a].velocities[x].samples[i].reset();
+                    printf("Cymbal - %d Mics - %d Velocity - %d Sample - %d %s\n", b, a, x, i, charBuffer);
+                }
+            }
+        }
+    }
+    
+    */
     
 }
 
@@ -103,8 +149,7 @@ void Fyp_samplerPrototype2AudioProcessor::changeProgramName (int index, const St
 //==============================================================================
 void Fyp_samplerPrototype2AudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    
-    kickAudioSource.prepareToPlay(samplesPerBlock, sampleRate);
+    synth.setCurrentPlaybackSampleRate(sampleRate);
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
 }
@@ -117,45 +162,18 @@ void Fyp_samplerPrototype2AudioProcessor::releaseResources()
 
 void Fyp_samplerPrototype2AudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& midiMessages)
 {
+    for (int i = getNumInputChannels(); i < getNumOutputChannels(); ++i)
+        buffer.clear (i, 0, buffer.getNumSamples());
     
     const int numSamples = buffer.getNumSamples();
     
-    // Pass any incoming midi messages to our keyboard state object, and let it
-    // add messages to the buffer if the user is clicking on the on-screen keys
-    keyboardState.processNextMidiBuffer (midiMessages, 0, numSamples, true);
-    
-    MidiBuffer processMidi;
-    int time;
-    MidiMessage m;
-    
-    for(MidiBuffer::Iterator i (midiMessages);i.getNextEvent(m,time);)
-    {
-        if(m.isNoteOn())
-        {
-            std::cout << "note on\n";
-            
-            AudioSourceChannelInfo info;
-            info.buffer = &buffer;
-            info.startSample = 0;
-            info.numSamples = buffer.getNumSamples();
-            kickAudioSource.prepareToPlay(numSamples, getSampleRate());
-            kickAudioSource.getNextAudioBlock(info);
-        }
-        else if (m.isNoteOff()){}
-        else if(m.isAftertouch()){}
-        
-        processMidi.addEvent(m, time);
-    }
-    midiMessages.swapWith(processMidi);
-    
+    synth.renderNextBlock(buffer, midiMessages, 0, numSamples);
     // In case we have more outputs than inputs, this code clears any output
     // channels that didn't contain input data, (because these aren't
     // guaranteed to be empty - they may contain garbage).
     // I've added this to avoid people getting screaming feedback
     // when they first compile the plugin, but obviously you don't need to
     // this code if your algorithm already fills all the output channels.
-    for (int i = getNumInputChannels(); i < getNumOutputChannels(); ++i)
-        buffer.clear (i, 0, buffer.getNumSamples());
     
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...

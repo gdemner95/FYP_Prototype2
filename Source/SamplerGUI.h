@@ -34,10 +34,7 @@
     Describe your class and how it works here!
                                                                     //[/Comments]
 */
-class SamplerGUI  : public Component,
-                    public ButtonListener
-
-
+class SamplerGUI  : public Component
 {
 public:
     //==============================================================================
@@ -50,21 +47,15 @@ public:
 
     void paint (Graphics& g);
     void resized();
-    void buttonClicked (Button* buttonThatWasClicked);
 
-    void TriggerButtonClicked(int ID){
 
-    }
 
 private:
     //[UserVariables]   -- You can add your own custom variables in this section.
     //[/UserVariables]
 
     //==============================================================================
-    ScopedPointer<TextButton> textButton1;
-    ScopedPointer<TextButton> textButton2;
-    ScopedPointer<TextButton> textButton3;
-    
+
 
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SamplerGUI)

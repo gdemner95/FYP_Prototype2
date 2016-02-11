@@ -14,6 +14,8 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PluginProcessor.h"
 #include "DrumSynthAudioSource.h"
+#include "SamplerGUI.h"
+#include "MixerComponent.h"
 
 
 //==============================================================================
@@ -34,13 +36,11 @@ public:
    void buttonClicked(Button* button) override;
 //    void comboBoxChanged(ComboBox* comboBox) override;
 private:
-    DrumSynthAudioSource* drumSynthAudioSource;
-//    AudioDeviceManager deviceManager;
     TextButton kickButton;
 //    ComboBox midiInputList;
 //    Label midiInputListLabel;
     int lastInputIndex;
-    
+    MixerComponent mixer;
     
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.

@@ -13,6 +13,7 @@
               jucerVersion="3.2.0">
   <MAINGROUP id="AFc30y" name="FYPSamplerPrototype2">
     <GROUP id="{2377EEFE-4045-8E21-EBA7-86F627F21849}" name="Source">
+      <FILE id="HkBP68" name="Strings.h" compile="0" resource="0" file="Source/Strings.h"/>
       <FILE id="hqKyd3" name="DrumSynthAudioSource.cpp" compile="1" resource="0"
             file="Source/DrumSynthAudioSource.cpp"/>
       <FILE id="fEBxQ0" name="DrumSynthAudioSource.h" compile="0" resource="0"

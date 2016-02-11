@@ -17,7 +17,7 @@
 class DrumSynthVoice : public SynthesiserVoice
 {
 public:
-    DrumSynthVoice() : level(0.0), tailOff(0.0){    };
+    DrumSynthVoice() : level(0.0), tailOff(0.0), drumSound (nullptr) {    };
     
     bool canPlaySound(SynthesiserSound* sound){
         
@@ -40,6 +40,9 @@ public:
     
     
     void stopNote(float velocity, bool allowTailOff) override{
+        clearCurrentNote();
+        drumSound = nullptr;
+        
         if (allowTailOff)
         {
             if (tailOff == 0.0)
@@ -49,48 +52,74 @@ public:
         {
             clearCurrentNote();
         }
+        
     }
     
     void renderNextBlock(AudioSampleBuffer& outputBuffer, int startSample, int numSamples)
     {
+        if (drumSound == nullptr)
+            return;
+        
+        const AudioSampleBuffer& currentSound = *drumSound->getBuffer(0,5);
         
         if(tailOff > 0.0){
             while(--numSamples >= 0){
                 
-                const AudioSampleBuffer& currentSound = drumSound->getBuffer();
-                
-                
-                for(int i = outputBuffer.getNumChannels(); i >= 0; i--){
-                    const float* currentSample = currentSound.getReadPointer(i, positionInBuffer);
-                    float* currentOutput = outputBuffer.getWritePointer(i, startSample);
-                    *currentOutput += *currentSample * tailOff;
+                for(int i = outputBuffer.getNumChannels(); --i >= 0;)
+                {
+                    const float sampleValue = (currentSound.getSample (i % currentSound.getNumChannels(), positionInBuffer) * tailOff);
+                    outputBuffer.setSample (i, startSample, sampleValue);
                 }
                 
                 startSample++;
                 positionInBuffer++;
                 tailOff *= 0.99;
-                
-                if(tailOff <= 0.005){
+                if (positionInBuffer >= currentSound.getNumSamples())
+                {
                     clearCurrentNote();
+                    drumSound = nullptr;
                     break;
                 }
                 
+                if (tailOff <= 0.005)
+                {
+                    clearCurrentNote();
+                    drumSound = nullptr;
+                    break;
+                }
             }
+            
         }
+        else
+        {
+            while( --numSamples >= 0)
+            {
+                for(int i = outputBuffer.getNumChannels(); --i >= 0;)
+                {
+//                    printf("Output channels: %d\n", i);
+//                    printf("Number Of Channels: %d\n", currentSound.getNumChannels());
+//                    printf("Pos in buffer: %d\n", positionInBuffer);
+                    const float sampleValue = currentSound.getSample (i % currentSound.getNumChannels(), positionInBuffer);
+//                    printf("startSample: %d", startSample);
+//                    printf("sample Value: %f", sampleValue);
+
+                    outputBuffer.setSample (i, startSample, sampleValue);
+                }
+                
+                startSample++;
+                positionInBuffer++;
+            }
         
-        
-        
-        
-        ///etc blah blah...
+        }
     }
-private:
-    double level, tailOff;
+    private:
+        double level, tailOff;
+        
+        DrumSound* drumSound;
+        int positionInBuffer;
+        
+    };
     
-    DrumSound* drumSound;
-    int positionInBuffer;
     
-};
-
-
-
+    
 #endif  // DRUMSYNTHVOICE_H_INCLUDED
