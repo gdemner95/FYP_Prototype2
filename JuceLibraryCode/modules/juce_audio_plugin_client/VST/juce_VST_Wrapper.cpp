@@ -110,7 +110,6 @@
 
 class JuceVSTWrapper;
 static bool recursionCheck = false;
-static juce::uint32 lastMasterIdleCall = 0;
 
 namespace juce
 {
@@ -277,27 +276,43 @@ public:
         #endif
          hostWindow (0)
     {
+        int maxNumInChannels, maxNumOutChannels;
+
         busUtils.findAllCompatibleLayouts();
 
         // VST-2 does not support disabling buses: so always enable all of them
         if (busUtils.hasDynamicInBuses() || busUtils.hasDynamicOutBuses())
             busUtils.enableAllBuses();
 
-        int maxNumInChannels  = busUtils.getBusCount (true)  > 0 ? busUtils.getSupportedBusLayouts (true,  0).maxNumberOfChannels() : 0;
-        int maxNumOutChannels = busUtils.getBusCount (false) > 0 ? busUtils.getSupportedBusLayouts (false, 0).maxNumberOfChannels() : 0;
+        {
+            PluginBusUtilities::ScopedBusRestorer busRestorer (busUtils);
 
-        // try setting the number of channels
-        if (maxNumInChannels > 0)
-            filter->setPreferredBusArrangement (true,  0, busUtils.getDefaultLayoutForChannelNumAndBus (true,  0, maxNumInChannels));
+            maxNumInChannels  = busUtils.getBusCount (true)  > 0 ? busUtils.getSupportedBusLayouts (true,  0).maxNumberOfChannels() : 0;
+            maxNumOutChannels = busUtils.getBusCount (false) > 0 ? busUtils.getSupportedBusLayouts (false, 0).maxNumberOfChannels() : 0;
 
-        if (maxNumOutChannels > 0)
-            filter->setPreferredBusArrangement (false, 0, busUtils.getDefaultLayoutForChannelNumAndBus (false, 0, maxNumOutChannels));
+            if (hostOnlySupportsStereo())
+            {
+                maxNumInChannels  = jmin (maxNumInChannels,  2);
+                maxNumOutChannels = jmin (maxNumOutChannels, 2);
+            }
 
-        resetAuxChannelsToDefaultLayout (true);
-        resetAuxChannelsToDefaultLayout (false);
+            // try setting the number of channels
+            if (maxNumInChannels > 0)
+                filter->setPreferredBusArrangement (true,  0, busUtils.getDefaultLayoutForChannelNumAndBus (true,  0, maxNumInChannels));
 
-        const int totalNumInChannels  = busUtils.findTotalNumChannels (true);
-        const int totalNumOutChannels = busUtils.findTotalNumChannels (false);
+            if (maxNumOutChannels > 0)
+                filter->setPreferredBusArrangement (false, 0, busUtils.getDefaultLayoutForChannelNumAndBus (false, 0, maxNumOutChannels));
+
+            resetAuxChannelsToDefaultLayout (true);
+            resetAuxChannelsToDefaultLayout (false);
+
+            maxNumInChannels = busUtils.findTotalNumChannels (true);
+            maxNumOutChannels = busUtils.findTotalNumChannels (false);
+
+            if ((busUtils.getBusCount (true)  > 0 && busUtils.getDefaultLayoutForBus (true, 0) .size() > maxNumInChannels)
+             || (busUtils.getBusCount (false) > 0 && busUtils.getDefaultLayoutForBus (false, 0).size() > maxNumOutChannels))
+                busRestorer.release();
+        }
 
         filter->setRateAndBufferSizeDetails (0, 0);
         filter->setPlayHead (this);
@@ -308,8 +323,8 @@ public:
 
         setUniqueID ((int) (JucePlugin_VSTUniqueID));
 
-        setNumInputs  (totalNumInChannels);
-        setNumOutputs (totalNumOutChannels);
+        setNumInputs  (maxNumInChannels);
+        setNumOutputs (maxNumOutChannels);
 
         canProcessReplacing (true);
         canDoubleReplacing (filter->supportsDoublePrecisionProcessing());
@@ -516,8 +531,8 @@ public:
         jassert (activePlugins.contains (this));
 
         {
-            const int numIn  = cEffect.numInputs;
-            const int numOut = cEffect.numOutputs;
+            const int numIn  = filter->getTotalNumInputChannels();
+            const int numOut = filter->getTotalNumOutputChannels();
 
             const ScopedLock sl (filter->getCallbackLock());
 
@@ -561,7 +576,8 @@ public:
                     tmpBuffers.channels[i] = inputs[i];
 
                 {
-                    AudioBuffer<FloatType> chans (tmpBuffers.channels, jmax (numIn, numOut), numSamples);
+                    const int numChannels = jmax (numIn, numOut);
+                    AudioBuffer<FloatType> chans (tmpBuffers.channels, numChannels, numSamples);
 
                     if (isBypassed)
                         filter->processBlockBypassed (chans, midiEvents);
@@ -658,14 +674,8 @@ public:
         {
             isProcessing = true;
 
-            const int numInChans  = filter->busArrangement.getTotalNumInputChannels();
-            const int numOutChans = filter->busArrangement.getTotalNumOutputChannels();
-
-            setNumInputs (numInChans);
-            setNumOutputs (numOutChans);
-
-            floatTempBuffers.channels.calloc ((size_t) (numInChans + numOutChans));
-            doubleTempBuffers.channels.calloc ((size_t) (numInChans + numOutChans));
+            floatTempBuffers.channels.calloc ((size_t) (cEffect.numInputs + cEffect.numOutputs));
+            doubleTempBuffers.channels.calloc ((size_t) (cEffect.numInputs + cEffect.numOutputs));
 
             double rate = getSampleRate();
             jassert (rate > 0);
@@ -936,12 +946,15 @@ public:
            // subtract the number of channels which are used by the aux channels
             int mainNumChannels = pluginInput->numChannels - busUtils.findTotalNumChannels (true, 1);
 
-            if (mainNumChannels < 0)
+            if (mainNumChannels <= 0)
                 return false;
 
-            if (mainNumChannels == pluginInput->numChannels)
-                newType = SpeakerMappings::vstArrangementTypeToChannelSet (*pluginInput);
-            else
+            if (mainNumChannels > busUtils.getSupportedBusLayouts (true, 0).maxNumberOfChannels())
+                return false;
+
+            newType = SpeakerMappings::vstArrangementTypeToChannelSet (*pluginInput);
+
+            if (mainNumChannels != newType.size())
                 newType = AudioChannelSet::canonicalChannelSet(mainNumChannels);
 
             if (busUtils.getChannelSet (true, 0) != newType)
@@ -956,12 +969,15 @@ public:
             // subtract the number of channels which are used by the aux channels
             int mainNumChannels = pluginOutput->numChannels - busUtils.findTotalNumChannels (false, 1);
 
-            if (mainNumChannels < 0)
+            if (mainNumChannels <= 0)
                 return false;
 
-            if (mainNumChannels == pluginOutput->numChannels)
-                newType = SpeakerMappings::vstArrangementTypeToChannelSet (*pluginOutput);
-            else
+            if (mainNumChannels > busUtils.getSupportedBusLayouts (false, 0).maxNumberOfChannels())
+                return false;
+
+            newType = SpeakerMappings::vstArrangementTypeToChannelSet (*pluginOutput);
+
+            if (mainNumChannels != newType.size())
                 newType = AudioChannelSet::canonicalChannelSet(mainNumChannels);
 
             AudioChannelSet oldOutputLayout = busUtils.getChannelSet (false, 0);
@@ -971,27 +987,13 @@ public:
                 if (! filter->setPreferredBusArrangement (false, 0, newType))
                     return false;
 
-            // did this change the input layout? If yes, change it back
-            if (oldInputLayout != busUtils.getChannelSet (true, 0)
-             && (busUtils.getBusCount (true) > 1 || busUtils.getBusCount (false) > 1))
-            {
-                bool success = filter->setPreferredBusArrangement (false, 0, oldOutputLayout);
-
-                jassert (success);
-                ignoreUnused (success);
-            }
+            // did this change the input layout?
+            if (oldInputLayout != busUtils.getChannelSet (true, 0) && pluginInput != nullptr)
+                return false;
         }
 
         busRestorer.release();
-
-        const int totalNumInChannels = busUtils.findTotalNumChannels(true);
-        const int totalNumOutChannels = busUtils.findTotalNumChannels(false);
-
         filter->setRateAndBufferSizeDetails(0, 0);
-        setNumInputs (totalNumInChannels);
-        setNumOutputs(totalNumOutChannels);
-
-        ioChanged();
 
         return true;
     }
@@ -1049,11 +1051,14 @@ public:
     bool getPinProperties (VstPinProperties& properties, bool direction, int index) const
     {
         // index refers to the absolute index when combining all channels of every bus
+        if (index >= (direction ? cEffect.numInputs : cEffect.numOutputs))
+            return false;
+
         const int n = busUtils.getBusCount(direction);
         int busIdx;
         for (busIdx = 0; busIdx < n; ++busIdx)
         {
-            const int numChans = busUtils.getNumChannels(direction, busIdx);
+            const int numChans = busUtils.getNumChannels (direction, busIdx);
             if (index < numChans)
                 break;
 
@@ -1061,25 +1066,30 @@ public:
         }
 
         if (busIdx >= n)
-            return false;
+        {
+            properties.flags = kVstPinUseSpeaker;
+            properties.label[0] = 0;
+            properties.shortLabel[0] = 0;
+            properties.arrangementType = kSpeakerArrEmpty;
+
+            return true;
+        }
 
         const AudioProcessor::AudioProcessorBus& busInfo = busUtils.getFilterBus (direction).getReference (busIdx);
 
-        busInfo.name.copyToUTF8 (properties.label, (size_t) (kVstMaxLabelLen - 1));
-        busInfo.name.copyToUTF8 (properties.shortLabel, (size_t) (kVstMaxShortLabelLen - 1));
+        String channelName = busInfo.name;
 
-        VstInt32 type = SpeakerMappings::channelSetToVstArrangementType (busInfo.channels);
+        channelName +=
+            String (" ") + AudioChannelSet::getAbbreviatedChannelTypeName (busInfo.channels.getTypeOfChannel(index));
 
-        if (type != kSpeakerArrEmpty)
-        {
-            properties.flags = kVstPinUseSpeaker | kVstPinIsActive;
-            properties.arrangementType = type;
-        }
-        else
-        {
-            properties.flags = 0;
-            properties.arrangementType = 0;
-        }
+        channelName.copyToUTF8 (properties.label, (size_t) (kVstMaxLabelLen - 1));
+        channelName.copyToUTF8 (properties.shortLabel, (size_t) (kVstMaxShortLabelLen - 1));
+
+        properties.flags = kVstPinUseSpeaker | kVstPinIsActive;
+        properties.arrangementType = SpeakerMappings::channelSetToVstArrangementType (busInfo.channels);
+
+        if (properties.arrangementType == kSpeakerArrEmpty)
+            properties.flags &= ~kVstPinIsActive;
 
         if (busInfo.channels.size() == 2)
             properties.flags |= kVstPinIsStereo;
@@ -1134,11 +1144,14 @@ public:
         {
             Array<AudioChannelSet::ChannelType> chans (channels.getChannelTypes());
 
+            if (channels == AudioChannelSet::disabled())
+                return kSpeakerArrEmpty;
+
             for (const Mapping* m = getMappings(); m->vst2 != kSpeakerArrEmpty; ++m)
                 if (m->matches (chans))
                     return m->vst2;
 
-            return kSpeakerArrEmpty;
+            return kSpeakerArrUserDefined;
         }
 
         static void channelSetToVstArrangement (const AudioChannelSet& channels, VstSpeakerArrangement& result)
@@ -1313,25 +1326,6 @@ public:
         if (hostWindow != 0)
             checkWindowVisibilityVST (hostWindow, editorComp, useNSView);
        #endif
-
-        tryMasterIdle();
-    }
-
-    void tryMasterIdle()
-    {
-        if (Component::isMouseButtonDownAnywhere() && ! recursionCheck)
-        {
-            const juce::uint32 now = juce::Time::getMillisecondCounter();
-
-            if (now > lastMasterIdleCall + 20 && editorComp != nullptr)
-            {
-                lastMasterIdleCall = now;
-
-                recursionCheck = true;
-                masterIdle();
-                recursionCheck = false;
-            }
-        }
     }
 
     void doIdleCallback()
@@ -1340,7 +1334,7 @@ public:
         if (MessageManager::getInstance()->isThisTheMessageThread()
              && ! recursionCheck)
         {
-            recursionCheck = true;
+            ScopedValueSetter<bool> svs (recursionCheck, true, false);
 
             JUCE_AUTORELEASEPOOL
             {
@@ -1349,8 +1343,6 @@ public:
                 for (int i = ComponentPeer::getNumPeers(); --i >= 0;)
                     if (ComponentPeer* p = ComponentPeer::getPeer(i))
                         p->performAnyPendingRepaintsNow();
-
-                recursionCheck = false;
             }
         }
     }
@@ -1386,7 +1378,7 @@ public:
             PopupMenu::dismissAllActiveMenus();
 
             jassert (! recursionCheck);
-            recursionCheck = true;
+            ScopedValueSetter<bool> svs (recursionCheck, true, false);
 
             if (editorComp != nullptr)
             {
@@ -1397,7 +1389,6 @@ public:
                     if (canDeleteLaterIfModal)
                     {
                         shouldDeleteEditor = true;
-                        recursionCheck = false;
                         return;
                     }
                 }
@@ -1422,8 +1413,6 @@ public:
            #if JUCE_LINUX
             hostWindow = 0;
            #endif
-
-            recursionCheck = false;
         }
     }
 
@@ -1579,8 +1568,7 @@ public:
     //==============================================================================
     // A component to hold the AudioProcessorEditor, and cope with some housekeeping
     // chores when it changes or repaints.
-    class EditorCompWrapper  : public Component,
-                               public AsyncUpdater
+    class EditorCompWrapper  : public Component
     {
     public:
         EditorCompWrapper (JuceVSTWrapper& w, AudioProcessorEditor* editor)
@@ -1608,15 +1596,6 @@ public:
         }
 
         void paint (Graphics&) override {}
-
-        void paintOverChildren (Graphics&) override
-        {
-            // this causes an async call to masterIdle() to help
-            // creaky old DAWs like Nuendo repaint themselves while we're
-            // repainting. Otherwise they just seem to give up and sit there
-            // waiting.
-            triggerAsyncUpdate();
-        }
 
        #if JUCE_MAC
         bool keyPressed (const KeyPress&) override
@@ -1669,11 +1648,6 @@ public:
                 wrapper.resizeHostWindow (cw, ch);  // (doing this a second time seems to be necessary in tracktion)
                #endif
             }
-        }
-
-        void handleAsyncUpdate() override
-        {
-            wrapper.tryMasterIdle();
         }
 
        #if JUCE_WINDOWS
@@ -1776,7 +1750,7 @@ private:
 
         if (filter != nullptr)
         {
-            int numChannels = filter->getTotalNumInputChannels() + filter->getTotalNumOutputChannels();
+            int numChannels = cEffect.numInputs + cEffect.numOutputs;
             tmpBuffers.tempChannels.insertMultiple (0, nullptr, numChannels);
         }
     }
@@ -1803,6 +1777,13 @@ private:
         }
     }
 
+    bool hostOnlySupportsStereo () const
+    {
+        const PluginHostType host (getHostType ());
+
+        // there are probably more hosts that need listing here
+        return host.isAbletonLive();
+    }
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (JuceVSTWrapper)
 };

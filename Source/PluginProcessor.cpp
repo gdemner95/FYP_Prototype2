@@ -13,25 +13,38 @@
 #include "DrumSynthAudioSource.h"
 #include "DrumSynthSound.h"
 #include "DrumSynthVoice.h"
-#include "Strings.h"
 
 //==============================================================================
-Fyp_samplerPrototype2AudioProcessor::Fyp_samplerPrototype2AudioProcessor(/*DrumSynthAudioSource& kickAudioSource*/)/* : kickAudioSource(keyboardState)*/
+Fyp_samplerPrototype2AudioProcessor::Fyp_samplerPrototype2AudioProcessor()
 {
     for(int i = 0; i < 32; i++){
         synth.addVoice(new DrumSynthVoice());
         std::cout << "voices added\n";
     }
-//    File localDir = File::getSpecialLocation (File::currentExecutableFile).getParentDirectory().getParentDirectory().getChildFile ("Resources");
-//    char *localDirPath[128];
-//    sprintf(*localDirPath, "%c", localDir);
-//    char charBuffer[128] = { 0 };
-//    sprintf(charBuffer, "%s%s%s", fileName[0], velocityIndex[5], stringEnd[0]);
     
-    File file("/Users/GeorgeDemner/Documents/UWE/Year 3/Final Year Project/FYP_SamplerPrototype2/Builds/MacOSX/Bass Drum In 6_1.wav");
-    synth.addSound(new DrumSound(file, 48, 0));
-        std::cout << "sounds added\n";
+//    File localDir = File::getSpecialLocation (File::currentExecutableFile).getParentDirectory().getParentDirectory().getChildFile ("Resources");
 
+//    char charBuffer[128] = { 0 };
+//
+//    for(int f = 0; f < 1; f++)
+//    {
+//        for (int v = 5; v < 6; v++)
+//        {
+//            for (int s = 0; s < 6; s++)
+//            {
+//                sprintf(charBuffer, "%s%s%s", fileName[f], velocityIndex[v], stringEnd[s]);
+//                File tempFile = localDir.getChildFile(charBuffer);
+                synth.addSound(new DrumSound(48, 0, 0));
+    printf("sound added\n");
+//                printf("sounds added: %s to %d\n", charBuffer, f);
+//            }
+//        }
+//    }
+    
+    
+    
+//    DrumSound::buffer[0].velocities[0].samples[0].openResource();
+    
     /*
     
     // Initialise synthesiser variables here
