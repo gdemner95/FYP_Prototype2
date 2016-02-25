@@ -17,64 +17,13 @@
 //==============================================================================
 Fyp_samplerPrototype2AudioProcessor::Fyp_samplerPrototype2AudioProcessor()
 {
+    
+    synth.setCurrentPlaybackSampleRate(44100);
     for(int i = 0; i < 32; i++){
         synth.addVoice(new DrumSynthVoice());
-        std::cout << "voices added\n";
     }
     
-//    File localDir = File::getSpecialLocation (File::currentExecutableFile).getParentDirectory().getParentDirectory().getChildFile ("Resources");
-
-//    char charBuffer[128] = { 0 };
-//
-//    for(int f = 0; f < 1; f++)
-//    {
-//        for (int v = 5; v < 6; v++)
-//        {
-//            for (int s = 0; s < 6; s++)
-//            {
-//                sprintf(charBuffer, "%s%s%s", fileName[f], velocityIndex[v], stringEnd[s]);
-//                File tempFile = localDir.getChildFile(charBuffer);
-                synth.addSound(new DrumSound(48, 0, 0));
-    printf("sound added\n");
-//                printf("sounds added: %s to %d\n", charBuffer, f);
-//            }
-//        }
-//    }
-    
-    
-    
-//    DrumSound::buffer[0].velocities[0].samples[0].openResource();
-    
-    /*
-    
-    // Initialise synthesiser variables here
-    char charBuffer[128] = { 0 };
-    for(int a = 0; a < 7; a++){
-        for (int x = 5; x < 6; x++){
-            for (int i = 0; i < 6; i++){
-                sprintf(charBuffer, "%s%s%s", fileName[a], velocityIndex[x], stringEnd[i]);
-                buffer[a].velocities[x].samples[i].openResource(charBuffer);
-                buffer[a].velocities[x].samples[i].reset();
-                printf("Buffer - %d Velocity - %d Sample - %d %s\n", a, x, i, charBuffer);
-            }
-        }
-    }
-    
-    for(int b = 0; b < 8; b++){
-        for(int a = 0; a < 5; a++){
-            for (int x = 5; x < 6; x++){
-                for (int i = 0; i < 6; i++){
-                    sprintf(charBuffer, "%s%s%s%s", fileName[b+7], cymbalMics[a], velocityIndex[x], stringEnd[i]);
-                    cymbals[b].mics[a].velocities[x].samples[i].openResource(charBuffer);
-                    cymbals[b].mics[a].velocities[x].samples[i].reset();
-                    printf("Cymbal - %d Mics - %d Velocity - %d Sample - %d %s\n", b, a, x, i, charBuffer);
-                }
-            }
-        }
-    }
-    
-    */
-    
+    synth.addSound(new DrumSound(48, 0));
 }
 
 Fyp_samplerPrototype2AudioProcessor::~Fyp_samplerPrototype2AudioProcessor()
@@ -162,9 +111,12 @@ void Fyp_samplerPrototype2AudioProcessor::changeProgramName (int index, const St
 //==============================================================================
 void Fyp_samplerPrototype2AudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
+    sampleRate = 44100;
     synth.setCurrentPlaybackSampleRate(sampleRate);
+
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
+
 }
 
 void Fyp_samplerPrototype2AudioProcessor::releaseResources()
@@ -175,6 +127,7 @@ void Fyp_samplerPrototype2AudioProcessor::releaseResources()
 
 void Fyp_samplerPrototype2AudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& midiMessages)
 {
+
     for (int i = getNumInputChannels(); i < getNumOutputChannels(); ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
     
@@ -190,15 +143,6 @@ void Fyp_samplerPrototype2AudioProcessor::processBlock (AudioSampleBuffer& buffe
     
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
-    
-    //    for (int channel = 0; channel < getNumInputChannels(); ++channel)
-    //    {
-    //        float* channelData = buffer.getWritePointer (channel);
-    //
-    //        // ..do something to the data...
-    //    }
-    
-    
 }
 
 //==============================================================================

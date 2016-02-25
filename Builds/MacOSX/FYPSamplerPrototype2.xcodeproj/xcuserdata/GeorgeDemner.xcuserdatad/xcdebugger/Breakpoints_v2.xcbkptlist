@@ -2,4 +2,1706 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Source/PluginProcessor.cpp"
+            timestampString = "478106692.095057"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "Fyp_samplerPrototype2AudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Source/PluginProcessor.cpp"
+            timestampString = "478106692.095057"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "Fyp_samplerPrototype2AudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../JuceLibraryCode/modules/juce_core/memory/juce_HeapBlock.h"
+            timestampString = "478103726.471977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "malloc (const size_t newNumElements, const size_t elementSize = sizeof (ElementType))"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;char, true&gt;::allocate(unsigned long, bool)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/Builds/MacOSX/../../JuceLibraryCode/modules/juce_audio_basics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.803137"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "243"
+                  endingLineNumber = "243"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;unsigned char, false&gt;::malloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_audio_basics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.803322"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;float, false&gt;::malloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_audio_basics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.803587"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;MIDIPacketList, false&gt;::malloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_audio_devices/../juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.803814"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;AudioBufferList, false&gt;::malloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_audio_formats/../juce_audio_basics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.804068"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;int, false&gt;::malloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_audio_formats/../juce_audio_basics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.804337"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;double, false&gt;::calloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_audio_processors/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.804552"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "232"
+                  endingLineNumber = "232"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;double*, false&gt;::calloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_audio_processors/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.804841"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "232"
+                  endingLineNumber = "232"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;unsigned int, false&gt;::malloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.805098"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;char, false&gt;::malloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.805311"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ValueTree::SharedObject*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_data_structures/../juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.805559"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ValueTree*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_data_structures/../juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.805743"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::Value*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_data_structures/../juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.805887"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::Value::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_data_structures/../juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.806095"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ValueTree::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_data_structures/../juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.806277"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::UndoManager::ActionSet*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_data_structures/../juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.806424"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::UndoableAction*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_data_structures/../juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.806574"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::UndoableAction const*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_data_structures/../juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.806742"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::MessageManager::MessageBase*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.806976"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::DeletedAtShutdown*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.807213"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ActionListener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.807414"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ChangeListener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.807608"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::Timer*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_events/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.80779"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::PixelARGB, false&gt;::malloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.807984"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::PixelAlpha, false&gt;::malloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.808129"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::PixelRGB, false&gt;::malloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.808272"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;CGSize, false&gt;::malloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.808468"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;unsigned short, false&gt;::malloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.808616"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;CGPoint, false&gt;::malloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.808748"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::MouseListener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.808877"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::Component*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.809072"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ConcertinaPanel::PanelSizes::Panel, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.809277"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ConcertinaPanel::PanelSizes::Panel*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.809412"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::PopupMenu::HelperClasses::ItemComponent*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.809628"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::PopupMenu::HelperClasses::MenuWindow*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.809797"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::PopupMenu::HelperClasses::MouseSourceState*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.809981"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::PropertyPanel::SectionComponent*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.810088"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ListBox::RowComponent*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.810261"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::TextAtom*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.810425"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::TextEditor::UniformTextSection*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.810585"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::TreeView::ContentComponent::RowItem*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.81076"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::TopLevelWindow*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.810885"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::MouseInputSourceInternal*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.810987"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::MouseInputSource, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.81109"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ComponentListener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.811246"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::KeyListener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.811497"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::FocusChangeListener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.811626"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ModalComponentManager::ModalItem*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.811775"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ModalComponentManager::Callback*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.811929"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::MouseInactivityDetector::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.812075"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::Button::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.812276"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::KeyPress, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.812446"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::FileBrowserListener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.812578"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::DirectoryContentsList::FileInfo*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.812736"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::FilenameComponentListener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.812937"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ComponentAnimator::AnimationTask*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.813065"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ComponentBuilder::TypeHandler*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.813236"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ConcertinaPanel::PanelHolder*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.813416"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ScrollBar::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.81355"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::StretchableLayoutManager::ItemLayoutProperties*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.813667"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::StretchableObjectResizer::Item, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.813885"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::TabbedButtonBar::TabInfo*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.81413"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::WeakReference&lt;juce::Component, juce::ReferenceCountedObject&gt;, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.814299"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::LookAndFeel::ColourSetting, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.814428"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::MenuBarModel::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.81459"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::PopupMenu::Item*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.814817"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::MarkerList::Marker*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.814961"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::MarkerList::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.815078"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::MarkerList*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.815349"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::RelativePointPath::ElementBase*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.815471"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::TextPropertyComponent::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.815573"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ComboBox::ItemInfo*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.815741"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ComboBox::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.815898"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::Label::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.816093"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::Slider::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.816364"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::TableHeaderComponent::ColumnInfo*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.8165"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::TableHeaderComponent::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.816748"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::TextEditor::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.816869"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::Range&lt;int&gt;, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.817295"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ToolbarItemComponent*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.817452"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::TreeViewItem*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.817557"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::TextButton*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.817662"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::TextEditor*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.817757"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ComboBox*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.817851"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ProgressBar*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.817945"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ComponentPeer*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.818037"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ApplicationCommandInfo*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.81813"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ApplicationCommandManagerListener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.818223"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::KeyPressMappingSet::CommandMapping*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.818317"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::KeyPressMappingSet::KeyPressTime*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.81841"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::Desktop::Displays::Display, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.818504"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::CodeDocumentLine*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.818621"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::CodeEditorComponent::CodeEditorLine::SyntaxToken, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.818754"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::CodeEditorComponent::ColourScheme::TokenType, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.818896"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::KeyMappingEditorComponent::ChangeKeyButton*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.819131"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::LiveConstantEditor::LivePropertyEditorBase*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.819268"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::CodeDocument::Position*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.819408"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::CodeDocument::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.819524"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::CodeEditorComponent::CodeEditorLine*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.819669"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::CodeDocument::Iterator*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.819858"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ColourSelector::SwatchComponent*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.820028"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::DrawableButton*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.820166"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::LiveConstantEditor::LiveValueBase*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.820302"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::CodeDocument*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.820409"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::RenderingHelpers::CachedGlyphEdgeTable&lt;juce::OpenGLRendering::SavedState&gt;*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_opengl/../juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.820522"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ImagePixelData::Listener*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_opengl/../juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.820662"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::OpenGLRendering::CachedImageList::CachedImage*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_opengl/../juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.820827"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::OpenGLTexture*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_opengl/../juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.820942"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::OpenGLRendering::SavedState*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_opengl/../juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.821056"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "juce::HeapBlock&lt;juce::ReferenceCountedObject*, false&gt;::realloc(unsigned long, unsigned long)"
+                  moduleName = "FYP_SamplerPrototype2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/georgedemner/Documents/Year%203/FYP/FYP_SamplerPrototype2/JuceLibraryCode/modules/juce_opengl/../juce_gui_extra/../juce_gui_basics/../juce_graphics/../juce_core/memory/juce_HeapBlock.h"
+                  timestampString = "478103827.82125"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -57,6 +57,7 @@ public:
 //    DrumSynthAudioSource kickAudioSource;
     
 private:
+    Drum kickDrum;
     AudioProcessorEditor* pEditor;
     MidiKeyboardState keyboardState;
     AudioDeviceManager deviceManager;
